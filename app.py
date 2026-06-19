@@ -3575,10 +3575,10 @@ def backoffice_latest():
                          200, {"Content-Type": "application/json; charset=utf-8"})
 
 if __name__ == "__main__":
-    print(f"Starting Waitress on http://127.0.0.1:{PORT}")
+    print(f"Starting Waitress on http://0.0.0.0:{PORT}")
     serve(
         app,
-        host="127.0.0.1",
+        host="0.0.0.0",
         port=PORT,
         threads=8,
         connection_limit=200,
